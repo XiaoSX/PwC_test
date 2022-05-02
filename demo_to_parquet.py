@@ -26,8 +26,9 @@ if __name__ == '__main__':
     df.to_csv(s, index=False)
     data = s.getvalue()
     # 调用装饰器
-    with write('demo.txt', data):
-        pass
+    #with write('demo.txt', data):
+    #    pass
+    # ? 是否可以直接写, 不转换?
     # 格式转换
     df = pd.read_csv('demo.txt')
     df.to_parquet('demo.parq')
